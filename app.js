@@ -1,9 +1,13 @@
-let pokemon = document.querySelector("#pokemon-name");
 const button = document.querySelector("button");
+const pokemonCount = 151;
 
-//Get Pokè Data from API.
+//making database all pokèmon
+
+// window.onload = {};
+
+//Get Pokè Data from API by name.
 const getPokeData = () => {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.value}`)
+  fetch(`https://pokeapi.co/api/v2/${pokemon}`)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
