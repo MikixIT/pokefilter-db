@@ -1,6 +1,5 @@
 let pokemon = document.querySelector("#pokemon-name");
 const button = document.querySelector("button");
-button.addEventListener("click", getPokeData);
 
 //Get Pokè Data from API.
 const getPokeData = () => {
@@ -13,3 +12,5 @@ const getPokeData = () => {
       console.log("Pokemon not found", err);
     });
 };
+
+button.addEventListener("click", getPokeData);
