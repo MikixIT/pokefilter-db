@@ -1,19 +1,15 @@
 const button = document.querySelector("button");
-const pokemonCount = 151;
+const pokemonNum = 151;
 let pokemonInput = document.querySelector("#pokemon-name");
 
 //obj pokemon
-let pokemon = {
-  name: "charmander",
-  id: 4,
-  type: "fire",
-  weight: 8,
-  height: 6,
-};
+let pokemon = {}; //  {1 : {"name" : "charmander", "pic" : #, "type" : ["fire"], "info" : "..."} }
 
 //making database all pokèmon
 
-window.onload = {};
+window.onload = async () => {
+  getPokeData(1);
+};
 
 //Get Pokè Data from API by name.
 const getPokeData = () => {
