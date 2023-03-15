@@ -48,7 +48,7 @@ header .types {
 }
 
 /* header .types:hover li {
-  animation: zoom-in-zoom-out 1s ease-out;
+  animation: zoom-in-zoom-out 1s ease-out;      //to fix hover in each icon.
 } */
 
 header .search input {
