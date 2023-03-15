@@ -84,12 +84,13 @@ header .search button {
 
 .card {
   overflow: hidden;
-  height: 550px;
-  width: 400px;
+  height: 650px;
+  width: 500px;
   border: 3px black solid;
   text-align: center;
   align-items: center;
   padding: 5px;
+  margin: 55px;
 }
 
 .card img {
