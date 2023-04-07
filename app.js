@@ -24,8 +24,7 @@ const getPokeData = () => {
 
 const displayPokemon = (pokemon) => {
   console.log(pokemon);
-  const pokemonCardHTML = pokemon.map(
-    (poke) => `
+  const pokemonCardHTML = pokemon.map(poke => `
   <div class="card">
   <div class="img-poke"><img src="${pokemon.img}" alt="${pokemon.name}"></div>
   <div class="name-poke">${pokemon.name}</div>
@@ -33,8 +32,7 @@ const displayPokemon = (pokemon) => {
   <div class="info-poke">
       Bla bla bla
   </div>
-  `
-  );
+  `);
   pokemonCards.innerHTML = pokemonCardHTML;
 };
 
