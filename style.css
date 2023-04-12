@@ -7,6 +7,8 @@
 .app {
   height: 100vh;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 header {
@@ -36,6 +38,17 @@ header .logo {
   -moz-text-fill-color: transparent;
 }
 
+header .credits{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+header .credits a{
+  font-size: 20px;
+  text-decoration: underline;
+  color: black;
+}
+
 header img {
   max-width: 50px;
   text-decoration: none;
@@ -45,6 +58,7 @@ header img {
 header .types {
   display: flex;
   list-style-type: none;
+  margin-right: 40px;
 }
 
 header .search input {
@@ -64,8 +78,9 @@ header .search button {
   vertical-align: middle;
   text-align: center;
   background-color: red;
-  height: 36px;
+  height: 96px;
   border-radius: 12px 0 0 12px;
+  font-size: 40px;
 }
 
 .cards {
@@ -82,7 +97,7 @@ header .search button {
   overflow: hidden;
   height: 650px;
   width: 460px;
-  border: 3px black solid;
+  border: 8px black solid;
   text-align: center;
   align-items: center;
   padding: 10px;
@@ -126,4 +141,11 @@ header .search button {
   margin: 5px;
   color: rgba(0, 0, 0, 0.58);
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  header{
+    flex-direction: column;
+    font-size: 10px;
+  }
 }
