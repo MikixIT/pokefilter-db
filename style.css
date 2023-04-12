@@ -81,11 +81,11 @@ header .search button {
 .card {
   overflow: hidden;
   height: 650px;
-  width: 500px;
+  width: 460px;
   border: 3px black solid;
   text-align: center;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
   margin: 55px;
 }
 
@@ -109,18 +109,19 @@ header .search button {
   }
 }
 
-.name {
+.name-poke {
   font-size: 30px;
   margin: 15px;
   font-weight: 900;
 }
 
-.id {
+.id-poke {
   font-size: 20px;
-  margin: 5px;
+  margin: 10px;
 }
 
-.pokemoninfo {
-  font-size: 15px;
-  margin: 15px;
+.type-poke {
+  font-size: 20px;
+  margin: 5px;
+  color: red;
 }

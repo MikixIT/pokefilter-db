@@ -6,14 +6,14 @@ let pokemonCards = document.querySelector(".cards");
 const getPokeData = () => {
   const promises = [];
 
-  for (let i = 1; i <= 150; i++) {
+  for (let i = 1; i <= 140; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     promises.push(fetch(url).then((response) => response.json()));
   }
 
   Promise.all(promises).then((results) => {
-    const pokemon = results.map((data) => ({
-      name: data.name,
+    const pokemon = results.map((data) => ({      
+     name: data.name,
       id: data.id,
       img: data.sprites["front_default"],
       type: data.types.map((type) => type.type.name).join(", "),
@@ -28,13 +28,12 @@ const displayPokemon = (pokemon) => {
   console.log(pokemon);
   const pokemonCardHTML = pokemon.map(poke => `
   <div class="card">
-    <div class="img-poke"><img src="${pokemon.img}" alt="${pokemon.name}"></div>
-    <div class="name-poke">${pokemon.name}</div>
-    <div class="id-poke">${pokemon.id}</div>
-    <div class="info-poke"></div>
-      ciao
+    <div class="img-poke"><img src="${poke.img}" alt="${poke.name}"></div>
+    <div class="name-poke">${poke.name}</div>
+    <div class="id-poke">${poke.id}</div>
+    <div class="type-poke">${poke.type}</div>
   </div>
-  `);
+  `)
   pokemonCards.innerHTML = pokemonCardHTML;
 };
 
