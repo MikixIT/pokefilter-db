@@ -41,6 +41,7 @@ header .logo {
 header .credits{
   font-size: 15px;
   font-weight: bold;
+  margin: 10px;
 }
 
 header .credits a{
@@ -147,5 +148,31 @@ header .search button {
   header{
     flex-direction: column;
     font-size: 10px;
+    text-align: center;
+    align-items: center;
+    max-width: 100%;
   }
+  header input{
+    width: 70%;
+  }
+
+  header .search button{
+    width: 30%;
+    font-size: 40px;
+  }
+
+  header .types{
+    font-size: 10px;
+    display: none;
+  }
+
+  .name-poke{
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .card{
+    height: 500px;
+  }
+
 }
