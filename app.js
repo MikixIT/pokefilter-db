@@ -17,7 +17,9 @@ const getPokeData = () => {
       id: data.id,
       img: data.sprites["front_default"],
       type: data.types.map((type) => type.type.name).join(", "),
-    }));
+    }
+    ));
+    
     displayPokemon(pokemon);
   });
 };
@@ -26,11 +28,11 @@ const displayPokemon = (pokemon) => {
   console.log(pokemon);
   const pokemonCardHTML = pokemon.map(poke => `
   <div class="card">
-  <div class="img-poke"><img src="${pokemon.img}" alt="${pokemon.name}"></div>
-  <div class="name-poke">${pokemon.name}</div>
-  <div class="id-poke">${pokemon.id}</div>
-  <div class="info-poke">
-      Bla bla bla
+    <div class="img-poke"><img src="${pokemon.img}" alt="${pokemon.name}"></div>
+    <div class="name-poke">${pokemon.name}</div>
+    <div class="id-poke">${pokemon.id}</div>
+    <div class="info-poke"></div>
+      ciao
   </div>
   `);
   pokemonCards.innerHTML = pokemonCardHTML;
