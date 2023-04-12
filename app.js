@@ -33,7 +33,7 @@ const displayPokemon = (pokemon) => {
     <div class="id-poke">${poke.id}</div>
     <div class="type-poke">${poke.type}</div>
   </div>
-  `)
+  `).join("")
   pokemonCards.innerHTML = pokemonCardHTML;
 };
 
