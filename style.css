@@ -158,7 +158,8 @@ header .search button {
 
   header .search button{
     width: 30%;
-    font-size: 40px;
+    text-align: center;
+    font-size: 30px;
   }
 
   header .types{
