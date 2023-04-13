@@ -39,7 +39,8 @@ const displayPokemon = (pokemon) => {
 
 //Get Pokè Data from API by name.
 const getPokeDataByName = () => {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonInput.value}`)
+  pokemonInput.toString();
+  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonInput.value.toLowerCase()}`)
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
