@@ -144,6 +144,24 @@ header .search button {
   font-weight: bold;
 }
 
+.types-dropdown{
+  display: none;
+}
+
+@media (max-width: 1400px)
+{
+  header .types{
+    font-size: 10px;
+    display: none;
+  }
+
+  .types-dropdown{
+    display: block;
+    margin: 30px;
+  }
+  
+}
+
 @media (max-width: 768px) {
   header{
     flex-direction: column;
@@ -163,8 +181,12 @@ header .search button {
   }
 
   header .types{
-    font-size: 10px;
     display: none;
+  }
+
+  .types-dropdown{
+    display: block;
+    margin: 30px;
   }
 
   .name-poke{
