@@ -12,15 +12,16 @@ const getPokeData = () => {
   }
 
   Promise.all(promises).then((results) => {
-    const pokemon = results.map((data) => ({      
+     const pokemon = results.map((data) => ({      
      name: data.name,
       id: data.id,
       img: data.sprites["front_default"],
       type: data.types.map((type) => type.type.name).join(", "),
     }
     ));
-    
+
     displayPokemon(pokemon);
+    return pokedex = pokemon;
   });
 };
 
@@ -36,22 +37,29 @@ const displayPokemon = (pokemon) => {
   pokemonCards.innerHTML = pokemonCardHTML;
 };
 
-//Get Pokè Data from API by name.
-const getPokeDataByName = () => {
-  pokemonInput.toString();
-  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonInput.value.toLowerCase()}`)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((err) => {
-      console.log("Pokemon not found", err);
-    });
-};
+
+//Ora che siamo riusciti a fare il return su pokedex che è async, possiamo scrivere come cercare dati da array(pokedex) con la input searchBar.
+
+
+
+// //Get Pokè Data from API by name.
+// const getPokeDataByName = () => {
+//   pokemonInput.toString();
+//   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonInput.value.toLowerCase()}`)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data);
+//     })
+//     .catch((err) => {
+//       console.log("Pokemon not found", err);
+//     });
+// };
+
+
 
 window.onload = getPokeData();
 
-button.addEventListener("click", getPokeDataByName);
+// button.addEventListener("click", getPokeDataByName);
 
 //     Promise.all()
 //       .then((response) => {response.json();})
