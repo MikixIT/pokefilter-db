@@ -25,7 +25,6 @@ const getPokeData = () => {
 };
 
 const displayPokemon = (pokemon) => {
-  console.log(pokemon);
   const pokemonCardHTML = pokemon.map(poke => `
   <div class="card">
     <div class="img-poke"><img src="${poke.img}" alt="${poke.name}"></div>

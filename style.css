@@ -92,6 +92,7 @@ header .search button {
   padding: 5px;
   flex-wrap: wrap;
   overflow-y: auto;
+  justify-content: center
 }
 
 .card {
@@ -99,6 +100,7 @@ header .search button {
   height: 600px;
   width: 340px;
   border: 8px black solid;
+  background: rgba(176, 176, 176, 0.202);
   text-align: center;
   align-items: center;
   padding: 10px;
@@ -133,18 +135,23 @@ header .search button {
 
 .id-poke {
   font-size: 40px;
-  margin: 10px;
+  margin: 15px;
   padding: 5px;
+  color: red;
 }
 
 .type-poke {
-  font-size: 20px;
-  margin: 5px;
-  color: rgba(0, 0, 0, 0.58);
+  font-size: 26px;
+  margin: 25px;
+  color: blue;
   font-weight: bold;
 }
 
 .types-dropdown{
+  display: none;
+}
+
+.hide{
   display: none;
 }
 
