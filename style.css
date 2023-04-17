@@ -112,18 +112,22 @@ header .search button {
 }
 
 .card img:hover {
-  animation: zoom-in-zoom-out 1s ease-out;
+  animation: bounce 0.7s linear
+  ;
 }
 
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
+@keyframes bounce {
+  20% {
+    transform: translateY(-8px);
   }
-  50% {
-    transform: scale(1.1, 1.1);
+  40% {
+    transform: translateY(0px);
   }
-  100% {
-    transform: scale(1, 1);
+  60% {
+    transform: translateY(-14px);
+  }
+  100%{
+    transform: translateY(-0px);
   }
 }
 
