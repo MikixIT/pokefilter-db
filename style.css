@@ -201,7 +201,7 @@ header .search button {
   }
 
   .name-poke{
-    font-size: 20px;
+    font-size: 30px;
     max-width: 100%;
   }
 
@@ -209,4 +209,6 @@ header .search button {
     height: 500px;
   }
 
+  .type-poke{
+    font-size: 19px;  }
 }
