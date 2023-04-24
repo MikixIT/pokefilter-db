@@ -37,7 +37,6 @@ const displayPokemon = (pokemon) => {
   pokemonCards.innerHTML = pokemonCardHTML;
 };
 
-
 //!Ora che siamo riusciti a fare il return su pokedex che è async, possiamo scrivere come cercare dati da array(pokedex) con la input searchBar (WEBDEVSIMPLED VIDEO).
 
 
