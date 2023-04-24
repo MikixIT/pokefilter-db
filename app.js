@@ -12,32 +12,35 @@ const getPokeData = () => {
   }
 
   Promise.all(promises).then((results) => {
-     const pokemon = results.map((data) => ({      
-     name: data.name,
+    const pokemon = results.map((data) => ({
+      name: data.name,
       id: data.id,
       img: data.sprites["front_default"],
       type: data.types.map((type) => type.type.name).join(", "),
-    }
-    ));
+    }));
 
     displayPokemon(pokemon);
-    return pokedex = pokemon;
+    return (pokedex = [pokemon]);
   });
 };
 
 const displayPokemon = (pokemon) => {
-  const pokemonCardHTML = pokemon.map(poke => `
+  const pokemonCardHTML = pokemon
+    .map(
+      (poke) => `
   <div class="card">
     <div class="img-poke"><img src="${poke.img}" alt="${poke.name}"></div>
     <div class="name-poke">${poke.name}</div>
     <div class="id-poke">${poke.id}</div>
     <div class="type-poke">${poke.type}</div>
   </div>
-  `).join("")
+  `
+    )
+    .join("");
   pokemonCards.innerHTML = pokemonCardHTML;
 };
 
-// !Verifica che il return di pokedex è async
+// !Verifica che il return di pokedex è async 🔴
 // let logPokeArray = () => {
 //   console.log(pokedex)
 // }
@@ -48,9 +51,7 @@ const displayPokemon = (pokemon) => {
 
 //!Ora che siamo riusciti a fare il return su pokedex che è async, possiamo scrivere come cercare dati da array(pokedex) con la input searchBar (WEBDEVSIMPLED VIDEO).
 
-
-
-// !Get Pokè Data from API by name.
+// !Get Pokè Data from API by name. (OLD) 🔴
 // const getPokeDataByName = () => {
 //   pokemonInput.toString();
 //   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonInput.value.toLowerCase()}`)
@@ -63,7 +64,13 @@ const displayPokemon = (pokemon) => {
 //     });
 // };
 
-
+pokemonInput.addEventListener("input", (e) => {
+  const value = e.target.value.toString();
+  value.toLowerCase();
+  pokedex.forEach((pokemon) => {
+    const visibleElement = pokemon.name.includes(value);
+  });
+});
 
 window.onload = getPokeData();
 
