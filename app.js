@@ -20,7 +20,6 @@ const getPokeData = () => {
     }));
 
     displayPokemon(pokemon);
-    return (pokedex = [pokemon]);
   });
 };
 
@@ -38,6 +37,7 @@ const displayPokemon = (pokemon) => {
     )
     .join("");
   pokemonCards.innerHTML = pokemonCardHTML;
+  return (pokedex = [pokemon]);
 };
 
 // !Verifica che il return di pokedex è async 🔴
@@ -65,10 +65,11 @@ const displayPokemon = (pokemon) => {
 // };
 
 pokemonInput.addEventListener("input", (e) => {
+  console.log(pokedex);
   const value = e.target.value.toString();
   value.toLowerCase();
   pokedex.forEach((pokemon) => {
-    const visibleElement = pokemon.name.includes(value);
+    const visibleElement = pokemon.id.includes(value);
   });
 });
 
