@@ -66,7 +66,7 @@ const displayPokemon = (pokemon) => {
 
 pokemonInput.addEventListener("input", (e) => {
   // We are sure the input next is inside the -> "value" and in every single type refresh the value
-  const value = e.target.value;
+  const value = e.target.value.toLowerCase();
   const pokedexFiltred = pokedex.filter((poke) => {
     return (poke.name.includes(value) || poke.types.includes(value));
   });
