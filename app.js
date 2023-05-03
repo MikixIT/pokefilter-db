@@ -37,7 +37,7 @@ const displayPokemon = (pokemon) => {
     )
     .join("");
   pokemonCards.innerHTML = pokemonCardHTML;
-  return (pokedex = [pokemon]);
+  return (pokedex = pokemon);
 };
 
 // !Verifica che il return di pokedex è async 🔴
@@ -65,11 +65,10 @@ const displayPokemon = (pokemon) => {
 // };
 
 pokemonInput.addEventListener("input", (e) => {
-  console.log(pokedex);
-  const value = e.target.value.toString();
-  value.toLowerCase();
-  pokedex.forEach((pokemon) => {
-    const visibleElement = pokemon.id.includes(value);
+  // We are sure the input next is inside the -> "value" and in every single type refresh the value
+  const value = e.target.value;
+  pokedex.forEach((poke) => {
+    const isVisible = poke.name.includes(value) || poke.id.includes(value);
   });
 });
 
