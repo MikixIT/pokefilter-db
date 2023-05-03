@@ -25,16 +25,16 @@ const getPokeData = () => {
 
 const displayPokemon = (pokemon) => {
   const pokemonCardHTML = pokemon
-    .map(
-      (poke) => `
+    .map((poke) => {
+      return `
   <div class="card">
     <div class="img-poke"><img src="${poke.img}" alt="${poke.name}"></div>
     <div class="name-poke">${poke.name}</div>
     <div class="id-poke">${poke.id}</div>
     <div class="type-poke">${poke.type}</div>
   </div>
-  `
-    )
+  `;
+    })
     .join("");
   pokemonCards.innerHTML = pokemonCardHTML;
   return (pokedex = pokemon);
@@ -67,9 +67,7 @@ const displayPokemon = (pokemon) => {
 pokemonInput.addEventListener("input", (e) => {
   // We are sure the input next is inside the -> "value" and in every single type refresh the value
   const value = e.target.value;
-  pokedex.forEach((poke) => {
-    const isVisible = poke.name.includes(value) || poke.id.includes(value);
-  });
+  pokedex.forEach((poke) => {});
 });
 
 window.onload = getPokeData();
