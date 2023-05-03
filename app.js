@@ -16,7 +16,7 @@ const getPokeData = () => {
       name: data.name,
       id: data.id,
       img: data.sprites["front_default"],
-      type: data.types.map((type) => type.type.name).join(", "),
+      types: data.types.map((type) => type.type.name).join(", "),
     }));
 
     displayPokemon(pokemon);
@@ -31,7 +31,7 @@ const displayPokemon = (pokemon) => {
     <div class="img-poke"><img src="${poke.img}" alt="${poke.name}"></div>
     <div class="name-poke">${poke.name}</div>
     <div class="id-poke">${poke.id}</div>
-    <div class="type-poke">${poke.type}</div>
+    <div class="type-poke">${poke.types}</div>
   </div>
   `;
     })
@@ -67,11 +67,13 @@ const displayPokemon = (pokemon) => {
 pokemonInput.addEventListener("input", (e) => {
   // We are sure the input next is inside the -> "value" and in every single type refresh the value
   const value = e.target.value;
-  pokedex.forEach((poke) => {});
+  const pokedexFiltred = pokedex.filter((poke) => {
+    return (poke.name.includes(value) || poke.types.includes(value));
+  });
+  console.log(pokedexFiltred);
 });
 
 window.onload = getPokeData();
-
 // button.addEventListener("click", getPokeDataByName);
 
 //     Promise.all()
@@ -86,4 +88,4 @@ window.onload = getPokeData();
 //         console.log("fetch error found!");
 //       });
 //   }
-// };
+// }
