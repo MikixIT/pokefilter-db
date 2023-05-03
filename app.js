@@ -19,11 +19,11 @@ const getPokeData = () => {
       types: data.types.map((type) => type.type.name).join(", "),
     }));
 
-    displayPokemon(pokemon);
+    displayCards(pokemon);
   });
 };
 
-const displayPokemon = (pokemon) => {
+const displayCards = (pokemon) => {
   const pokemonCardHTML = pokemon
     .map((poke) => {
       return `
@@ -64,16 +64,17 @@ const displayPokemon = (pokemon) => {
 //     });
 // };
 
-pokemonInput.addEventListener("input", (e) => {
+pokemonInput.addEventListener("keyup", (e) => {
   // We are sure the input next is inside the -> "value" and in every single type refresh the value
-  const value = e.target.value.toLowerCase();
+  const value = e.target.value;
   const pokedexFiltred = pokedex.filter((poke) => {
     return (poke.name.includes(value) || poke.types.includes(value));
   });
+  displayCards(pokedexFiltred);
   console.log(pokedexFiltred);
 });
 
-window.onload = getPokeData();
+getPokeData();
 // button.addEventListener("click", getPokeDataByName);
 
 //     Promise.all()
