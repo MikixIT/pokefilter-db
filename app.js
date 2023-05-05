@@ -64,7 +64,7 @@ const displayCards = (pokemon) => {
 //     });
 // };
 
-pokemonInput.addEventListener("keyup", (e) => {
+pokemonInput.addEventListener("input", (e) => {
   // We are sure the input next is inside the -> "value" and in every single type refresh the value
   const value = e.target.value;
   const pokedexFiltred = pokedex.filter((poke) => {
