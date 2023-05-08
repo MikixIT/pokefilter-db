@@ -72,7 +72,7 @@ pokemonInput.addEventListener("input", (e) => {
   });
   displayCards(pokedexFiltred);
   console.log(pokedexFiltred);
-});
+  });
 
 getPokeData();
 // button.addEventListener("click", getPokeDataByName);
