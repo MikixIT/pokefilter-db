@@ -200,6 +200,7 @@ header .search button {
     width: 30%;
     text-align: center;
     font-size: 30px;
+    margin: 10px;
   }
 
   header .types{
@@ -208,7 +209,16 @@ header .search button {
 
   .types-dropdown{
     display: block;
-    margin: 30px;
+    margin: 10px;
+  }
+
+  .dark-mode-button button{
+    padding: 5px;
+    width: 40px;
+    font-size: 24px;
+    background-color: black;
+    border-radius: 12px 12px 12px 12px;
+    margin: 10px;
   }
 
   .name-poke{
