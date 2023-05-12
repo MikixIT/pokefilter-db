@@ -40,30 +40,6 @@ const displayCards = (pokemon) => {
   return (pokedex = pokemon);
 };
 
-// !Verifica che il return di pokedex è async 🔴
-// let logPokeArray = () => {
-//   console.log(pokedex)
-// }
-
-// console.log(pokedex);
-
-// setTimeout(logPokeArray, 2000);
-
-//!Ora che siamo riusciti a fare il return su pokedex che è async, possiamo scrivere come cercare dati da array(pokedex) con la input searchBar (WEBDEVSIMPLED VIDEO).
-
-// !Get Pokè Data from API by name. (OLD) 🔴
-// const getPokeDataByName = () => {
-//   pokemonInput.toString();
-//   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonInput.value.toLowerCase()}`)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data);
-//     })
-//     .catch((err) => {
-//       console.log("Pokemon not found", err);
-//     });
-// };
-
 pokemonInput.addEventListener("input", (e) => {
   // We are sure the input next is inside the -> "value" and in every single type refresh the value
   const value = e.target.value.toLowerCase();
@@ -71,22 +47,7 @@ pokemonInput.addEventListener("input", (e) => {
     return (poke.name.includes(value) || poke.types.includes(value));
   });
   displayCards(pokedexFiltred);
-  console.log(pokedexFiltred);
   });
 
 getPokeData();
-// button.addEventListener("click", getPokeDataByName);
 
-//     Promise.all()
-//       .then((response) => {response.json();})
-//       .then((data) => {
-//         const pokemon = {
-
-//         };
-//         console.log(pokemon);
-//       })
-//       .catch((err) => {
-//         console.log("fetch error found!");
-//       });
-//   }
-// }
