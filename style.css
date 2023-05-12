@@ -4,6 +4,7 @@
   font-family: "Press Start 2P", cursive;
 }
 
+
 .app {
   height: 100vh;
   width: 100%;
@@ -27,7 +28,7 @@ header .logo {
   background-image: linear-gradient(
     120deg,
     rgb(223, 33, 36) 32%,
-    rgb(231, 241, 39) 24%,
+    rgb(186, 195, 13) 24%,
     rgba(48, 20, 160, 0.929) 50%,
     rgb(5, 43, 255) 68%
   );
@@ -41,17 +42,20 @@ header .logo {
 header .credits{
   font-size: 15px;
   font-weight: bold;
-  margin: 10px;
 }
 
 header .credits a{
   font-size: 20px;
-  text-decoration: underline;
+  text-decoration: none;
   color: black;
 }
 
+.underline-name{
+  text-decoration: underline !important;
+}
+
 header img {
-  max-width: 50px;
+  max-width: 45px;
   text-decoration: none;
   vertical-align: middle;
 }
@@ -59,19 +63,19 @@ header img {
 header .types {
   display: flex;
   list-style-type: none;
-  margin-right: 40px;
+  margin-right: 10px;
 }
 
 header .search input {
   border: 0;
   outline: none;
-  height: 36px;
-  padding: 4px 4px;
+  height: 46px;
+  padding: 8px 8px;
   background-color: rgba(255, 255, 255, 0.624);
   color: #000000;
   border: 2px rgb(178, 3, 3) solid;
   font-size: 10px;
-  width: 55%;
+  max-width: 78%;
 }
 
 header .search button {
@@ -79,9 +83,16 @@ header .search button {
   vertical-align: middle;
   text-align: center;
   background-color: red;
-  height: 20%;
   border-radius: 12px 0 0 12px;
+  font-size: 28px;
+}
+
+.dark-mode-button button{
+  padding: 5px;
+  width: 40px;
   font-size: 24px;
+  background-color: black;
+  border-radius: 12px 0 0 12px;
 }
 
 .cards {
@@ -173,7 +184,7 @@ header .search button {
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 958px) {
   header{
     flex-direction: column;
     font-size: 10px;

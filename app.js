@@ -1,12 +1,13 @@
 const button = document.querySelector("button");
 let pokedex = [];
-let pokemonInput = document.querySelector("#pokemon-input-name");
-let pokemonCards = document.querySelector(".cards");
+const pokemonInput = document.querySelector("#pokemon-input-name");
+const pokemonCards = document.querySelector(".cards");
+const darkModeButton = document.querySelector(".dark-mode-button");
 
 const getPokeData = () => {
   const promises = [];
 
-  for (let i = 1; i <= 140; i++) {
+  for (let i = 1; i <= 10; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     promises.push(fetch(url).then((response) => response.json()));
   }
