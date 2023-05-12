@@ -12,14 +12,14 @@ const getPokeData = () => {
   }
 
   Promise.all(promises).then((results) => {
-    const pokemon = results.map((data) => ({
+    pokedex = results.map((data) => ({
       name: data.name,
       id: data.id,
       img: data.sprites["front_default"],
       types: data.types.map((type) => type.type.name).join(", "),
     }));
 
-    displayCards(pokemon);
+    displayCards(pokedex);
   });
 };
 
@@ -37,15 +37,16 @@ const displayCards = (pokemon) => {
     })
     .join("");
   pokemonCards.innerHTML = pokemonCardHTML;
-  return (pokedex = pokemon);
 };
+
 
 pokemonInput.addEventListener("input", (e) => {
   // We are sure the input next is inside the -> "value" and in every single type refresh the value
   const value = e.target.value.toLowerCase();
   const pokedexFiltred = pokedex.filter((poke) => {
-    return (poke.name.includes(value) || poke.types.includes(value));
+    return (poke.name.toLowerCase().includes(value) || poke.types.toLowerCase().includes(value));
   });
+  console.log(pokedexFiltred);
   displayCards(pokedexFiltred);
   });
 
