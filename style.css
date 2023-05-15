@@ -14,6 +14,13 @@ body {
   --darkmode-lightmode: black;
   --border-color: black;
   --background-color: white;
+  --logo-dark-light: linear-gradient(
+    120deg,
+    rgb(223, 33, 36) 32%,
+    rgb(132, 13, 151) 24%,
+    rgba(48, 20, 160, 0.929) 50%,
+    rgb(5, 43, 255) 68%
+  );
 }
 
 .dark-mode {
@@ -22,6 +29,13 @@ body {
   --darkmode-lightmode: rgba(243, 243, 243, 0.783);
   --border-color: rgba(255, 255, 255, 0.558);
   --background-color: black;
+  --logo-dark-light: linear-gradient(
+    120deg,
+    rgb(5, 43, 255) 32%,
+    rgb(48, 20, 160, 0.929) 24%,
+    rgba(223, 33, 36) 50%,
+    rgb(132, 13, 151) 68%
+  );
 }
 
 .app {
@@ -44,13 +58,7 @@ header {
 header .logo {
   font-size: 30px;
   padding: 10px;
-  background-image: linear-gradient(
-    120deg,
-    rgb(223, 33, 36) 32%,
-    rgb(132, 13, 151) 24%,
-    rgba(48, 20, 160, 0.929) 50%,
-    rgb(5, 43, 255) 68%
-  );
+  background-image: var(--logo-dark-light);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -61,6 +69,8 @@ header .logo {
 header .credits {
   font-size: 15px;
   font-weight: bold;
+  margin-left: 20px;
+  max-width: 20%;
 }
 
 header .credits a {
@@ -74,7 +84,7 @@ header .credits a {
 }
 
 header img {
-  max-width: 45px;
+  max-width: 35px;
   text-decoration: none;
   vertical-align: middle;
 }
@@ -127,7 +137,7 @@ header .search button {
 
 .card {
   overflow: hidden;
-  height: 600px;
+  height: 560px;
   width: 340px;
   border: 8px var(--border-color) solid;
   background: var(--main-color);
@@ -142,7 +152,7 @@ header .search button {
 }
 
 .card img:hover {
-  animation: bounce 0.7s linear;
+  animation: bounce 0.8s infinite alternate;
 }
 
 @keyframes bounce {
@@ -153,7 +163,10 @@ header .search button {
     transform: translateY(0px);
   }
   60% {
-    transform: translateY(-14px);
+    transform: translateY(-16px);
+  }
+  90% {
+    transform: translateY(2px);
   }
   100% {
     transform: translateY(-0px);
@@ -189,29 +202,49 @@ header .search button {
   display: none;
 }
 
-.darkmode {
-}
-
+/* TESTED ON iPAD AIR 5  */
 @media (max-width: 1400px) {
   header .types {
     font-size: 10px;
     display: none;
   }
 
+  header .credits {
+    width: 20%;
+    padding: 10px;
+  }
+
+  header .input button {
+    width: 10%;
+  }
+
   .types-dropdown {
     display: block;
-    margin: 30px;
+    text-align: center;
   }
 }
 
-@media (max-width: 958px) {
+/* TESTED ON iPHONE 11 */
+@media (max-width: 1058px) {
   header {
     flex-direction: column;
     font-size: 10px;
     text-align: center;
     align-items: center;
     max-width: 100%;
+    padding: 10px;
   }
+
+  header .credits a {
+    text-align: center;
+    font-size: 15px;
+    margin-left: -20px;
+  }
+
+  header .credits {
+    text-align: center;
+  }
+
   header input {
     width: 70%;
   }
@@ -236,7 +269,7 @@ header .search button {
     padding: 5px;
     width: 40px;
     font-size: 24px;
-    background-color: black;
+    background-color: var(da);
     border-radius: 12px 12px 12px 12px;
     margin: 10px;
   }
