@@ -40,16 +40,28 @@ const displayCards = (pokemon) => {
   pokemonCards.innerHTML = pokemonCardHTML;
 };
 
-
 pokemonInput.addEventListener("input", (e) => {
   // We are sure the input next is inside the -> "value" and in every single type refresh the value
   const value = e.target.value.toLowerCase();
   const pokedexFiltred = pokedex.filter((poke) => {
-    return (poke.name.toLowerCase().includes(value) || poke.types.toLowerCase().includes(value));
+    return (
+      poke.name.toLowerCase().includes(value) ||
+      poke.types.toLowerCase().includes(value)
+    );
   });
   console.log(pokedexFiltred);
   displayCards(pokedexFiltred);
-  });
+});
 
 getPokeData();
 
+darkModeButton.onclick = function () {
+  document.body.classList.toggle("dark-mode");
+  if (document.body.classList.contains("dark-mode")) {
+    darkModeButton.innerHTML = "<button>🌞</button>";
+    darkModeButton.classList = "dark-mode-button";
+  } else {
+    darkModeButton.innerHTML = "<button>🌙</button>";
+    darkModeButton.classList = "dark-mode-button";
+  }
+};

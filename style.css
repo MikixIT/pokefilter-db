@@ -4,12 +4,32 @@
   font-family: "Press Start 2P", cursive;
 }
 
+body {
+  background-color: var(--background-color);
+}
+
+:root {
+  --main-color: rgba(128, 128, 128, 0.222);
+  --text-color: black;
+  --darkmode-lightmode: black;
+  --border-color: black;
+  --background-color: white;
+}
+
+.dark-mode {
+  --main-color: rgba(255, 255, 255, 0.653);
+  --text-color: black;
+  --darkmode-lightmode: rgba(243, 243, 243, 0.783);
+  --border-color: rgba(255, 255, 255, 0.558);
+  --background-color: black;
+}
 
 .app {
   height: 100vh;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  background-color: var(--background-color);
 }
 
 header {
@@ -17,18 +37,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: black 3px solid;
-  background-color: rgba(128, 128, 128, 0.222);
+  border: var(--border-color) 3px solid;
+  background-color: var(--main-color);
 }
 
 header .logo {
   font-size: 30px;
   padding: 10px;
-  background-color: red;
   background-image: linear-gradient(
     120deg,
     rgb(223, 33, 36) 32%,
-    rgb(186, 195, 13) 24%,
+    rgb(132, 13, 151) 24%,
     rgba(48, 20, 160, 0.929) 50%,
     rgb(5, 43, 255) 68%
   );
@@ -39,18 +58,18 @@ header .logo {
   -moz-text-fill-color: transparent;
 }
 
-header .credits{
+header .credits {
   font-size: 15px;
   font-weight: bold;
 }
 
-header .credits a{
+header .credits a {
   font-size: 20px;
   text-decoration: none;
-  color: black;
+  color: var(--text-color);
 }
 
-.underline-name{
+.underline-name {
   text-decoration: underline !important;
 }
 
@@ -72,7 +91,7 @@ header .search input {
   height: 46px;
   padding: 8px 8px;
   background-color: rgba(255, 255, 255, 0.624);
-  color: #000000;
+  color: var(--text-color);
   border: 2px rgb(178, 3, 3) solid;
   font-size: 10px;
   max-width: 78%;
@@ -87,11 +106,11 @@ header .search button {
   font-size: 28px;
 }
 
-.dark-mode-button button{
+.dark-mode-button button {
   padding: 5px;
   width: 40px;
   font-size: 24px;
-  background-color: black;
+  background-color: var(--darkmode-lightmode);
   border-radius: 12px 0 0 12px;
 }
 
@@ -103,15 +122,15 @@ header .search button {
   padding: 5px;
   flex-wrap: wrap;
   overflow-y: auto;
-  justify-content: center
+  justify-content: center;
 }
 
 .card {
   overflow: hidden;
   height: 600px;
   width: 340px;
-  border: 8px black solid;
-  background: rgba(176, 176, 176, 0.202);
+  border: 8px var(--border-color) solid;
+  background: var(--main-color);
   text-align: center;
   align-items: center;
   padding: 10px;
@@ -123,8 +142,7 @@ header .search button {
 }
 
 .card img:hover {
-  animation: bounce 0.7s linear
-  ;
+  animation: bounce 0.7s linear;
 }
 
 @keyframes bounce {
@@ -137,7 +155,7 @@ header .search button {
   60% {
     transform: translateY(-14px);
   }
-  100%{
+  100% {
     transform: translateY(-0px);
   }
 }
@@ -146,6 +164,7 @@ header .search button {
   font-size: 30px;
   margin: 15px;
   font-weight: 900;
+  color: var(--text-color);
 }
 
 .id-poke {
@@ -162,57 +181,58 @@ header .search button {
   font-weight: bold;
 }
 
-.types-dropdown{
+.types-dropdown {
   display: none;
 }
 
-.hide{
+.hide {
   display: none;
 }
 
-@media (max-width: 1400px)
-{
-  header .types{
+.darkmode {
+}
+
+@media (max-width: 1400px) {
+  header .types {
     font-size: 10px;
     display: none;
   }
 
-  .types-dropdown{
+  .types-dropdown {
     display: block;
     margin: 30px;
   }
-  
 }
 
 @media (max-width: 958px) {
-  header{
+  header {
     flex-direction: column;
     font-size: 10px;
     text-align: center;
     align-items: center;
     max-width: 100%;
   }
-  header input{
+  header input {
     width: 70%;
   }
 
-  header .search button{
+  header .search button {
     width: 30%;
     text-align: center;
     font-size: 30px;
     margin: 10px;
   }
 
-  header .types{
+  header .types {
     display: none;
   }
 
-  .types-dropdown{
+  .types-dropdown {
     display: block;
     margin: 10px;
   }
 
-  .dark-mode-button button{
+  .dark-mode-button button {
     padding: 5px;
     width: 40px;
     font-size: 24px;
@@ -221,15 +241,16 @@ header .search button {
     margin: 10px;
   }
 
-  .name-poke{
+  .name-poke {
     font-size: 20px;
     max-width: 100%;
   }
 
-  .card{
-    height: 500px
+  .card {
+    height: 500px;
   }
 
-  .type-poke{
-    font-size: 18px;  }
+  .type-poke {
+    font-size: 18px;
+  }
 }
