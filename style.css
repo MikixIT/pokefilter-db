@@ -228,41 +228,45 @@ header .search button {
 @media (max-width: 1058px) {
   header {
     flex-direction: column;
-    font-size: 10px;
     text-align: center;
     align-items: center;
-    max-width: 100%;
     padding: 10px;
   }
 
-  header .credits a {
-    text-align: center;
-    font-size: 15px;
-    margin-left: -20px;
-  }
+header .credits {
+  font-size: 15px;
+  text-align: center;
+  margin-right: 5px;
 
-  header .credits {
-    text-align: center;
-  }
+}
+header .credits a{
+  font-size: 10px;
+  text-align: center;
+  margin-right: 5px;
+
+}
 
   header input {
-    width: 70%;
+    width: 80%;
   }
 
   header .search button {
     width: 30%;
     text-align: center;
-    font-size: 30px;
+    font-size: 26px;
     margin: 10px;
-  }
-
-  header .types {
-    display: none;
+    border-radius: 12px 12px 12px 12px;
+    padding: 2px;
   }
 
   .types-dropdown {
     display: block;
-    margin: 10px;
+    margin: 30px;
+  }
+
+  .types-dropdown option {
+    text-align: center;
+    padding: 20px;
   }
 
   .dark-mode-button button {
