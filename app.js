@@ -7,7 +7,7 @@ const darkModeButton = document.querySelector(".dark-mode-button");
 const getPokeData = () => {
   const promises = [];
 
-  for (let i = 1; i <= 1009; i++) {
+  for (let i = 1; i <= 950; i++) {
     const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
     promises.push(fetch(url).then((response) => response.json()));
   }
