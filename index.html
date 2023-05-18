@@ -1,109 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="img/x-icon" href="icon.ico">
-    <link rel="shortcut icon" href="/icon.ico">
-    <link rel="apple-touch-icon" href="/icon.ico"/>
-    <link rel="apple-touch-icon" sizes="128x128" href="icon.ico">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="img/x-icon" href="icon.ico" />
+    <link rel="shortcut icon" href="/icon.ico" />
+    <link rel="apple-touch-icon" href="/icon.ico" />
+    <link rel="apple-touch-icon" sizes="128x128" href="icon.ico" />
     <title>PokèFilter</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app">
-        <header>
-            <div class="logo"> <a href="index.html">PokèFilter</a></div>
-            <div class="credits">Dev with <a href="https://pokeapi.co/"> <img src="./img/pika.webp"> </a> by <a class="underline-name" href="https://www.linkedin.com/in/michaeltorresdeveloper/"> Michael </a> </div>
-            <div class="types-dropdown">
-                <select id="types-pokemon-drop" name="types">
-                    <option value="fire">FIRE 🔥</option>
-                    <option value="water">WATER 💧</option>
-                    <option value="normal">NORMAL </option>
-                    <option value="grass">GRASS 🌵</option>
-                    <option value="flying">FLYING 🦋</option>
-                    <option value="fighting">FIGHTING 🤺</option>
-                    <option value="poison">POISON ☠️</option>
-                    <option value="electric">ELECTRIC ⚡️</option>
-                    <option value="ground">GROUND 🕳️</option>
-                    <option value="rock">ROCK 🗿</option>
-                    <option value="psychic">PSYCHIC 🔮</option>
-                    <option value="ice"> ICE ❄️</option>
-                    <option value="bug">BUG 🐞</option>
-                    <option value="ghost">GHOST 👻</option>
-                    <option value="steel">STEEL 🧲 </option>
-                    <option value="dragon">DRAGON 🐉</option>
-                    <option value="dark">DARK ⚫️ </option>
-                    <option value="fairy">FAIRY 🧚‍♀️</option>
+      <header>
+        <div class="logo"><a href="index.html">PokèFilter</a></div>
+        <div class="credits">
+          Dev with
+          <a href="https://pokeapi.co/"> <img src="./img/pika.webp" /> </a> by
+          <a
+            class="underline-name"
+            href="https://www.linkedin.com/in/michaeltorresdeveloper/"
+          >
+            Michael
+          </a>
+        </div>
+        <div class="types-dropdown">
+          <select id="types-pokemon-drop" name="types">
+            <option value="fire">FIRE 🔥</option>
+            <option value="water">WATER 💧</option>
+            <option value="normal">NORMAL</option>
+            <option value="grass">GRASS 🌵</option>
+            <option value="flying">FLYING 🦋</option>
+            <option value="fighting">FIGHTING 🤺</option>
+            <option value="poison">POISON ☠️</option>
+            <option value="electric">ELECTRIC ⚡️</option>
+            <option value="ground">GROUND 🕳️</option>
+            <option value="rock">ROCK 🗿</option>
+            <option value="psychic">PSYCHIC 🔮</option>
+            <option value="ice">ICE ❄️</option>
+            <option value="bug">BUG 🐞</option>
+            <option value="ghost">GHOST 👻</option>
+            <option value="steel">STEEL 🧲</option>
+            <option value="dragon">DRAGON 🐉</option>
+            <option value="dark">DARK ⚫️</option>
+            <option value="fairy">FAIRY 🧚‍♀️</option>
+          </select>
+        </div>
+        <ul class="types">
+          <li>
+            <a href="#">
+              <img href="#" id="fire" src="img/icons/fire.svg" />
+            </a>
+            <a href="#">
+              <img href="#" id="water" src="img/icons/water.svg" />
+            </a>
+            <a href="#">
+              <img href="#" id="normal" src="img/icons/normal.svg" />
+            </a>
+            <a href="#">
+              <img href="#" id="grass" src="img/icons/grass.svg" />
+            </a>
+            <a href="#">
+              <img href="#" id="flying" src="img/icons/flying.svg" />
+            </a>
+            <a href="#">
+              <img href="#" id="fighting" src="img/icons/fighting.svg" />
+            </a>
+            <a href="#">
+              <img href="#" id="poison" src="img/icons/poison.svg" />
+            </a>
+            <a href="#">
+              <img href="#" id="electric" src="img/icons/electric.svg" />
+            </a>
+            <a>
+                <img href="#" id="ground" src="img/icons/ground.svg" /> 
+            </a>
+            <a><img href="#" id="rock" src="img/icons/rock.svg" /> 
+            </a>
+            <a><img href="#" id="psychic" src="img/icons/psychic.svg" /> 
+            </a>
+            <a><img href="#" id="ice" src="img/icons/ice.svg" /> 
+            </a>
+            <a><img href="#" id="bug" src="img/icons/bug.svg" /> 
+            </a>
+            <a><img href="#" id="ghost" src="img/icons/ghost.svg" /> 
+            </a>
+            <a><img href="#" id="steel" src="img/icons/steel.svg" /> 
+            </a>
+            <a><img href="#" id="dragon" src="img/icons/dragon.svg" />
+             </a>
+            <a><img href="#" id="dark" src="img/icons/dark.svg" />
+             </a>
+            <a><img href="#" id="fairy" src="img/icons/fairy.svg" />
+             </a>
+          </li>
+        </ul>
 
-                  </select>
-            </div>
-            <ul class="types">                    
-                <li>
-                    <a href="#">
-                        <img href="#" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                </li>
-                    <a href="#">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                    </a>
-                </li>
-                    <a href="#">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                    </a>
-                </li>
-                    <a href="#">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                    </a>
-                </li>
-                    <a href="#">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                    </a>
-                </li>
-                    <a href="#">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                    </a>
-                </li>
-                    <a href="#">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                    </a>
-                </li>
-                    <a href="#">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                    </a>
-                </li>
-                    <a href="#">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                    </a>
-                </li>
-                    <a href="#">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                    </a>
-                </li>
-                    <a href="#">
-                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e8ddc4da-23dd-4502-b65b-378c9cfe5efa/dffvl1m-a992d76d-bfa4-41cd-bff6-7546b47f2184.png/v1/fill/w_1280,h_1280,strp/fire_type_symbol_galar_by_jormxdos_dffvl1m-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTI4MCIsInBhdGgiOiJcL2ZcL2U4ZGRjNGRhLTIzZGQtNDUwMi1iNjViLTM3OGM5Y2ZlNWVmYVwvZGZmdmwxbS1hOTkyZDc2ZC1iZmE0LTQxY2QtYmZmNi03NTQ2YjQ3ZjIxODQucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DBmvPsi4hX6q3f8XHGcinkRbtbV2zsh5nB-_s9wse_4">
-                    </a>
-                </li>
+        <div class="search">
+          <input
+            id="pokemon-input-name"
+            placeholder="Catch'em All.."
+            type="search"
+          />
+          <button>🔎</button>
+        </div>
+        <div class="dark-mode-button">
+          <button>🌙</button>
+        </div>
+      </header>
 
-            </ul>
-            
-            <div class="search">
-                <input id="pokemon-input-name" placeholder="Catch'em All.." type="search">
-                <button>🔎</button>
-            </div>
-            <div class="dark-mode-button">
-                <button>🌙</button>
-            </div>
-        </header>
-
-        <main>
-            <div class="cards">
-
-            </div>
-        </main>
+      <main>
+        <div class="cards"></div>
+      </main>
     </div>
 
     <script src="app.js"></script>
-
-</body>
+  </body>
 </html>

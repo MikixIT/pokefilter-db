@@ -93,6 +93,11 @@ header .types {
   display: flex;
   list-style-type: none;
   margin-right: 10px;
+  /* width: --px; */
+}
+header .types a {
+  text-decoration: none;
+  list-style-type: none;
 }
 
 header .search input {
@@ -201,6 +206,98 @@ header .search button {
 .hide {
   display: none;
 }
+
+#fire{
+  background-color: red;
+  border-radius: 50%;
+}
+
+#water{
+  background-color: blue;
+  border-radius: 50%;
+}
+
+#normal{
+  background-color: rgb(248, 240, 240);
+  border-radius: 50%;
+}
+
+#grass{
+  background-color: green;
+  border-radius: 50%;
+}
+
+#flying{
+  background-color: rgb(53, 210, 213);
+  border-radius: 50%;
+}
+
+#fighting{
+  background-color: rgb(237, 128, 26);
+  border-radius: 50%;
+}
+
+#poison{
+  background-color: rgb(250, 50, 233);
+  border-radius: 50%;
+}
+
+#electric{
+  background-color: rgb(217, 214, 30);
+  border-radius: 50%;
+}
+
+#ground{
+  background-color: rgb(170, 103, 26);
+  border-radius: 50%;
+}
+
+#rock{
+  background-color: grey;
+  border-radius: 50%;
+}
+
+#psychic{
+  background-color: rgb(142, 29, 222);
+  border-radius: 50%;
+}
+
+#ice{
+  background-color: rgb(35, 251, 208);
+  border-radius: 50%;
+}
+
+#bug{
+  background-color: rgb(141, 190, 69);
+  border-radius: 50%;
+}
+
+#ghost{
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+#steel{
+  background-color: rgb(158, 158, 158);
+  border-radius: 50%;
+}
+
+#dragon{
+  background-color: rgb(181, 133, 29);
+  border-radius: 50%;
+}
+
+#dark{
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+#fairy{
+  background-color: rgb(218, 20, 109);
+  border-radius: 50%;
+}
+
+
 
 /* TESTED ON iPAD AIR 5  */
 @media (max-width: 1400px) {
