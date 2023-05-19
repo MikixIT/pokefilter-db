@@ -4,12 +4,16 @@ const pokemonInput = document.querySelector("#pokemon-input-name");
 const pokemonCards = document.querySelector(".cards");
 const darkModeButton = document.querySelector(".dark-mode-button");
 
-//Types Pokemon
+//Types Pokemon (If u have a better solution for loop this variables, let me know 🤯)
 
 const fire = "fire"
 const fireButton = document.querySelector("#fire");
 const water = "water";
 const waterButton = document.querySelector("#water");
+const grass = "grass";
+const normal = "normal";
+const normalButton = document.querySelector("#normal")
+const grassButton = document.querySelector("#grass");
 const flying = "flying";
 const flyingButton = document.querySelector("#flying");
 const fighting = "fighting";
@@ -41,6 +45,8 @@ const fairyButton = document.querySelector("#fairy");
 
 //
 
+
+// Get Pokemon Data API with promises and map in a object array (pokedex)
 const getPokeData = () => {
   const promises = [];
 
@@ -61,6 +67,8 @@ const getPokeData = () => {
   });
 };
 
+//
+
 const displayCards = (pokemon) => {
   const pokemonCardHTML = pokemon
     .map((poke) => {
@@ -77,6 +85,8 @@ const displayCards = (pokemon) => {
   pokemonCards.innerHTML = pokemonCardHTML;
 };
 
+//Filter and listener for Text Input
+
 pokemonInput.addEventListener("input", (e) => {
   // We are sure the input next is inside the -> "value" and in every single type refresh the value
   const value = e.target.value.toLowerCase();
@@ -89,18 +99,47 @@ pokemonInput.addEventListener("input", (e) => {
   console.log(pokedexFiltred);
   displayCards(pokedexFiltred);
 });
+//
 
 
-fireButton.addEventListener("click", (type) => {
-    const fireFiltred = pokedex.filter((poke) => {
-        return(
-          poke.types.includes(type)
-        );
+//Types EventListener => click
+
+fireButton.addEventListener("click", () => typeFilterButton(fire));
+waterButton.addEventListener("click", () => typeFilterButton(water));
+normalButton.addEventListener("click", () => typeFilterButton(normal));
+grassButton.addEventListener("click", () => typeFilterButton(grass));
+flyingButton.addEventListener("click", () => typeFilterButton(flying));
+fightingButton.addEventListener("click", () => typeFilterButton(fighting));
+poisonButton.addEventListener("click", () => typeFilterButton(poison));
+electricButton.addEventListener("click", () => typeFilterButton(electric));
+groundButton.addEventListener("click", () => typeFilterButton(ground));
+rockButton.addEventListener("click", () => typeFilterButton(rock));
+psychicButton.addEventListener("click", () => typeFilterButton(psychic));
+iceButton.addEventListener("click", () => typeFilterButton(ice));
+bugButton.addEventListener("click", () => typeFilterButton(bug));
+ghostButton.addEventListener("click", () => typeFilterButton(ghost))
+steelButton.addEventListener("click", () => typeFilterButton(steel));
+dragonButton.addEventListener("click", () => typeFilterButton(dragon));
+darkButton.addEventListener("click", () => typeFilterButton(dark));
+fairyButton.addEventListener("click", () => typeFilterButton(fairy));
+
+//
+
+//Types Filter Function
+function typeFilterButton(type) {
+    const pokemonTypeFiltred = pokedex.filter((poke) => {
+      return (
+        poke.types.toLowerCase().includes(type)
+      );
     })
-    displayCards(fireFiltred);
-})
+    displayCards(pokemonTypeFiltred);
+  }
 
 getPokeData();
+
+//
+
+//Dark Mode
 
 darkModeButton.onclick = function () {
   document.body.classList.toggle("dark-mode");
@@ -112,3 +151,5 @@ darkModeButton.onclick = function () {
     darkModeButton.classList = "dark-mode-button";
   }
 };
+
+//
