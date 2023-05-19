@@ -3,7 +3,43 @@ let pokedex = [];
 const pokemonInput = document.querySelector("#pokemon-input-name");
 const pokemonCards = document.querySelector(".cards");
 const darkModeButton = document.querySelector(".dark-mode-button");
-const fire = "fire";
+
+//Types Pokemon
+
+const fire = "fire"
+const fireButton = document.querySelector("#fire");
+const water = "water";
+const waterButton = document.querySelector("#water");
+const flying = "flying";
+const flyingButton = document.querySelector("#flying");
+const fighting = "fighting";
+const fightingButton = document.querySelector("#fighting");
+const poison = "poison";
+const poisonButton = document.querySelector("#poison");
+const electric = "electric";
+const electricButton = document.querySelector("#electric");
+const ground = "ground";
+const groundButton = document.querySelector("#ground");
+const rock = "rock";
+const rockButton = document.querySelector("#rock");
+const psychic = "psychic";
+const psychicButton = document.querySelector("#psychic");
+const ice = "ice";
+const iceButton = document.querySelector("#ice");
+const bug = "bug";
+const bugButton = document.querySelector("#bug");
+const ghost = "ghost";
+const ghostButton = document.querySelector("#ghost");
+const steel = "steel";
+const steelButton = document.querySelector("#steel");
+const dragon = "dragon";
+const dragonButton = document.querySelector("#dragon");
+const dark = "dark";
+const darkButton = document.querySelector("#dark");
+const fairy = "fairy";
+const fairyButton = document.querySelector("#fairy");
+
+//
 
 const getPokeData = () => {
   const promises = [];
@@ -55,7 +91,14 @@ pokemonInput.addEventListener("input", (e) => {
 });
 
 
-
+fireButton.addEventListener("click", (type) => {
+    const fireFiltred = pokedex.filter((poke) => {
+        return(
+          poke.types.includes(type)
+        );
+    })
+    displayCards(fireFiltred);
+})
 
 getPokeData();
 

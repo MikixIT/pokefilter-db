@@ -107,6 +107,8 @@ header .types a {
 
 header .types img {
   width: 25px;
+  padding: 8px;
+  margin: 2px;
 }
 
 header .search input {
@@ -226,7 +228,7 @@ header .search button {
 }
 
 #normal{
-  background-color: rgb(248, 240, 240);
+  background-color: rgba(36, 32, 32, 0.357);
   border-radius: 50%;
 }
 
