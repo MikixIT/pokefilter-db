@@ -69,8 +69,10 @@ header .logo {
 header .credits {
   font-size: 15px;
   font-weight: bold;
-  margin-left: 20px;
-  max-width: 20%;
+  max-width: 10%;
+  margin-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 header .credits a {
@@ -93,11 +95,17 @@ header .types {
   display: flex;
   list-style-type: none;
   margin-right: 10px;
+  margin-left: -10px;
   /* width: --px; */
 }
+
 header .types a {
   text-decoration: none;
   list-style-type: none;
+}
+
+header .types img {
+  width: 25px;
 }
 
 header .search input {
@@ -109,16 +117,15 @@ header .search input {
   color: var(--text-color);
   border: 2px rgb(178, 3, 3) solid;
   font-size: 10px;
-  max-width: 78%;
+  max-width: 72%;
 }
 
 header .search button {
-  padding: 8px, 8px;
   vertical-align: middle;
   text-align: center;
   background-color: red;
   border-radius: 12px 0 0 12px;
-  font-size: 28px;
+  font-size: 25px;
 }
 
 .dark-mode-button button {
