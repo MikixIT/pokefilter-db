@@ -102,6 +102,7 @@ header .types {
 header .types a {
   text-decoration: none;
   list-style-type: none;
+  background-color: rgba(0, 0, 0, 0.076);
 }
 
 header .types img {
@@ -316,6 +317,10 @@ header .search button {
   header .credits {
     width: 20%;
     padding: 10px;
+  }
+  header .credits a {
+
+    font-size: 17px;
   }
 
   header .input button {

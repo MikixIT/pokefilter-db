@@ -3,6 +3,7 @@ let pokedex = [];
 const pokemonInput = document.querySelector("#pokemon-input-name");
 const pokemonCards = document.querySelector(".cards");
 const darkModeButton = document.querySelector(".dark-mode-button");
+const fire = "fire";
 
 const getPokeData = () => {
   const promises = [];
@@ -52,6 +53,9 @@ pokemonInput.addEventListener("input", (e) => {
   console.log(pokedexFiltred);
   displayCards(pokedexFiltred);
 });
+
+
+
 
 getPokeData();
 
