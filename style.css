@@ -381,7 +381,7 @@ header .search button {
     font-size: 15px;
     font-weight: bold;
     text-align: center;
-    max-width: 20%;
+    max-width: 100%;
     margin-left: 0px;
     margin-right: 0px;
     padding-top: 0px;
