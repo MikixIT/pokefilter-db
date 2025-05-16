@@ -1,8 +1,24 @@
 # pokefilter-db
-**Pokémon filter web application! we will have the possibility to filter pokèmon by name and type of pokèmon, all developed using Javascript and using the API (https://pokeapi.co/)**
+PokéFilter DB
 
-![](preview-poke.gif) 
+A simple and fun web app to filter Pokémon by name or type!
+
+Built with vanilla JavaScript and powered by the awesome PokéAPI.
+
+🔍 Features
+	•	Search Pokémon by name
+	•	Filter by type (Fire, Water, Grass, etc.)
+	•	Clean and responsive UI
+	•	Fast and beginner-friendly project
+
+
+### 🚀 Try it out
+  ### Wanna see it in action?
+  👉 [TRY IT](https://mikixit.github.io/pokefilter-db/) 
+
 ---
+  ![](preview-poke.gif) 
 
-## Do you like it? [TRY IT](https://mikixit.github.io/pokefilter-db/) 
+
+
 
